@@ -7,6 +7,7 @@
     <meta name="keywords" content="pet badge reels, custom pet accessories, pet ID badges, pet lovers">
     <title>ReelTails - Pet Badge Reels</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -28,45 +29,122 @@
         <section class="hero">
             <h1>Welcome to ReelTails</h1>
             <p>Premium Pet Badge Reels for Pet Lovers</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+                <a href="custom.html" class="btn btn-secondary">Custom Order</a>
+            </div>
         </section>
 
         <section class="featured-products">
             <h2>Featured Products</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/classic-reel.jpg" alt="Classic Pet Badge Reel">
+                    <div class="product-image">
+                        <img src="images/classic-reel.jpg" alt="Classic Pet Badge Reel" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="products.html" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
                     <h3>Classic Reel</h3>
-                    <p>Our signature pet badge reel with premium quality</p>
+                    <p>Our signature pet badge reel with premium quality materials and elegant design.</p>
+                    <div class="product-price">$19.99</div>
                 </div>
                 <div class="product-card">
-                    <img src="images/custom-reel.jpg" alt="Custom Pet Badge Reel">
+                    <div class="product-image">
+                        <img src="images/custom-reel.jpg" alt="Custom Pet Badge Reel" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="custom.html" class="btn btn-small">Customize</a>
+                        </div>
+                    </div>
                     <h3>Custom Design</h3>
-                    <p>Personalized badge reels with your pet's photo</p>
+                    <p>Personalized badge reels featuring your pet's photo and custom text.</p>
+                    <div class="product-price">$34.99</div>
                 </div>
                 <div class="product-card">
-                    <img src="images/premium-reel.jpg" alt="Premium Pet Badge Reel">
+                    <div class="product-image">
+                        <img src="images/premium-reel.jpg" alt="Premium Pet Badge Reel" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="products.html" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
                     <h3>Premium Collection</h3>
-                    <p>Luxury badge reels with premium materials</p>
+                    <p>Luxury badge reels crafted with premium materials and exclusive designs.</p>
+                    <div class="product-price">$29.99</div>
                 </div>
             </div>
         </section>
 
         <section class="why-choose-us">
             <h2>Why Choose ReelTails?</h2>
-            <ul class="benefits-list">
-                <li>Premium Quality Materials</li>
-                <li>Custom Design Options</li>
-                <li>Fast Shipping</li>
-                <li>30-Day Money Back Guarantee</li>
-            </ul>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Premium Quality</h3>
+                    <p>Handcrafted with the finest materials for lasting durability</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Custom Designs</h3>
+                    <p>Personalize your reel with your pet's photo and custom text</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Shipping</h3>
+                    <p>Quick delivery with careful packaging to ensure safe arrival</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Pet Lovers</h3>
+                    <p>Created by pet lovers, for pet lovers</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/customer1.jpg" alt="Happy Customer" loading="lazy">
+                    </div>
+                    <p>"The quality of these badge reels is outstanding. I've had mine for over a year and it still looks brand new!"</p>
+                    <cite>- Jessica M.</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/customer2.jpg" alt="Happy Customer" loading="lazy">
+                    </div>
+                    <p>"I love how my pet's photo looks on the custom reel. The attention to detail is amazing!"</p>
+                    <cite>- David K.</cite>
+                </div>
+            </div>
         </section>
 
         <section class="newsletter">
             <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive offers and new product announcements</p>
             <form id="newsletter-form" class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
+        </section>
+
+        <section class="instagram-feed">
+            <h2>Follow Us on Instagram</h2>
+            <div class="instagram-grid">
+                <a href="https://instagram.com" target="_blank" class="instagram-item">
+                    <img src="images/instagram1.jpg" alt="Instagram Post" loading="lazy">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="instagram-item">
+                    <img src="images/instagram2.jpg" alt="Instagram Post" loading="lazy">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="instagram-item">
+                    <img src="images/instagram3.jpg" alt="Instagram Post" loading="lazy">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="instagram-item">
+                    <img src="images/instagram4.jpg" alt="Instagram Post" loading="lazy">
+                </a>
+            </div>
         </section>
     </main>
 
@@ -78,14 +156,23 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="custom.html">Custom Orders</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <ul class="social-links">
-                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://pinterest.com" target="_blank">Pinterest</a></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> info@reeltails.com</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
                 </ul>
             </div>
         </div>
