@@ -316,38 +316,75 @@
 
   /* Mobile Styles */
   @media (max-width: 767px) {
+    .main-nav {
+      padding: 0.7rem 0.2rem;
+      height: 64px;
+      background: rgba(171, 131, 96, 0.98);
+      box-shadow: 0 2px 12px rgba(172, 132, 101, 0.12);
+      border-radius: 0 0 18px 18px;
+    }
     .nav-container {
-      padding: 0 var(--spacing-sm);
+      padding: 0 0.5rem;
+      min-height: 64px;
     }
-
     .logo-img {
-      height: 60px;
-      width: 60px;
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-color);
     }
-
     .logo span {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
     }
-
     .nav-links {
-      padding-top: 80px;
+      position: fixed;
+      top: 64px;
+      right: -100vw;
+      width: 90vw;
+      max-width: 320px;
+      height: calc(100vh - 64px);
+      background: rgba(255,255,255,0.97);
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 8px 32px rgba(172, 132, 101, 0.18);
+      padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: flex-start;
+      transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
+      z-index: 999;
     }
-
     .nav-links a {
-      font-size: 1rem;
-      padding: var(--spacing-md);
-      margin: var(--spacing-xs) 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      width: 100%;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      margin: 0;
       text-align: left;
     }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      background: rgba(255, 255, 255, 0.1);
-      padding-left: var(--spacing-lg);
+    .nav-links a:hover, .nav-links a.active {
+      background: var(--primary-color);
+      color: #fff;
+      transform: translateX(6px) scale(1.04);
     }
-
     .nav-toggle-label {
-      margin-right: var(--spacing-sm);
+      width: 38px;
+      height: 38px;
+      margin-right: 0.5rem;
+    }
+    .nav-toggle-label span {
+      height: 4px;
+      border-radius: 2px;
+    }
+    .nav-overlay {
+      background: rgba(44, 34, 22, 0.45);
+      z-index: 998;
     }
   }
 
