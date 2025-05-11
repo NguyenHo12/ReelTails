@@ -2206,8 +2206,13 @@ main {
 }
 
 .product-badge.sale {
-  background: var(--accent-color);
-  color: var(--white);
+  background: #8B4513; /* Darker brown for better contrast */
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 0.2em 0.8em;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 
 .product-info {
@@ -2215,17 +2220,17 @@ main {
 }
 
 .product-info h3 {
-  color: var(--text-color);
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing-xs);
+  color: #2A1A05; /* Darker text for better contrast */
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .product-info p {
-  color: var(--text-light);
-  font-size: 0.95rem;
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.6;
+  color: #4A3A25; /* Darker text for better contrast */
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 .product-price {
@@ -2235,15 +2240,16 @@ main {
 }
 
 .sale-price {
-  color: var(--primary-color);
-  font-size: 1.3rem;
+  color: #8B4513; /* Darker brown for better contrast */
   font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .original-price {
-  color: var(--text-light);
-  font-size: 1rem;
+  color: #666666; /* Darker gray for better contrast */
   text-decoration: line-through;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
 }
 
 /* Product Reviews */
@@ -2803,13 +2809,13 @@ main {
   font-size: 1.1rem;
 }
 .product-badge.sale {
-  background: var(--accent-color);
-  color: var(--white);
+  background: #8B4513; /* Darker brown for better contrast */
+  color: #FFFFFF;
+  font-weight: 700;
   border-radius: 20px;
-  padding: 0.3em 1em;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-left: var(--spacing-sm);
+  padding: 0.2em 0.8em;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 .product-description {
   color: var(--text-color);
@@ -2938,12 +2944,13 @@ main {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: var(--accent-color);
-  color: var(--white);
+  background: #8B4513; /* Darker brown for better contrast */
+  color: #FFFFFF;
+  font-weight: 700;
   border-radius: 20px;
-  padding: 0.2em 0.9em;
+  padding: 0.2em 0.8em;
   font-size: 0.95rem;
-  font-weight: 600;
+  letter-spacing: 0.5px;
   z-index: 2;
   animation: badgePop 1.2s infinite alternate;
 }
