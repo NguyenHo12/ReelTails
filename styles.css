@@ -1,9 +1,9 @@
 /* Variables */
 :root {
   /* Main Colors */
-  --primary-color: #ac8465; /* Chamoisee */
+  --primary-color: #684b34; /* Chamoisee */
   --primary-light: #f0e8e2; /* Isabelline */
-  --primary-dark: #ab8360; /* Chamoisee-2 */
+  --primary-dark: #684b34; /* Chamoisee-2 */
   --white: #ffffff; /* White */
 
   /* Complementary Colors */
@@ -84,7 +84,7 @@ img {
 
 /* Navigation */
 .main-nav {
-  background: var(--primary-dark);
+  background: var(--nav-gradient);
   padding: var(--spacing-sm);
   position: fixed;
   width: 100%;
