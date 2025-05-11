@@ -36,114 +36,78 @@
     </header>
 
     <main class="products-page">
+       
         <div class="container">
-            <div class="products-header">
-                <h1>Our Products</h1>
-                <div class="products-stats">
-                    <span>3971 Sales</span>
-                    <span>184 Admirers</span>
-                </div>
-            </div>
-
             <div class="products-layout">
                 <!-- Sidebar Filters -->
                 <aside class="products-sidebar">
-                    <div class="search-box">
-                        <input type="text" placeholder="Search products...">
-                        <button><i class="fas fa-search"></i></button>
-                    </div>
-
                     <div class="category-filters">
                         <h3>Categories</h3>
                         <ul>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="all">
-                                    All (18)
-                                </label>
+                                <span>All</span>
+                                <span class="count">18</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="on-sale">
-                                    On Sale (1)
-                                </label>
+                                <span>On sale</span>
+                                <span class="count">1</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="dog-bandana">
-                                    Dog Bandana (1)
-                                </label>
+                                <span>Dog Bandana</span>
+                                <span class="count">1</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="christmas-stockings">
-                                    Christmas Stockings (4)
-                                </label>
+                                <span>Christmas Stockings</span>
+                                <span class="count">4</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="keychain">
-                                    Keychain (3)
-                                </label>
+                                <span>Keychain</span>
+                                <span class="count">3</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="pet-memorial">
-                                    Pet Memorial (3)
-                                </label>
+                                <span>Pet Memorial</span>
+                                <span class="count">3</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="badge-buddy">
-                                    Badge Buddy (2)
-                                </label>
+                                <span>Badge Buddy</span>
+                                <span class="count">2</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="photo-ornament">
-                                    Photo Ornament (1)
-                                </label>
+                                <span>Photo Ornament</span>
+                                <span class="count">1</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="photo-fridge-magnet">
-                                    Photo Fridge Magnet (2)
-                                </label>
+                                <span>Photo Fridge Magnet</span>
+                                <span class="count">2</span>
                             </li>
                             <li>
-                                <label>
-                                    <input type="checkbox" name="category" value="custom-pins">
-                                    Custom Pins (1)
-                                </label>
+                                <span>Custom Pins</span>
+                                <span class="count">1</span>
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="price-filter">
-                        <h3>Price Range</h3>
-                        <div class="price-inputs">
-                            <input type="number" placeholder="Min" min="0">
-                            <span>-</span>
-                            <input type="number" placeholder="Max" min="0">
-                        </div>
-                        <button class="btn btn-primary">Apply</button>
                     </div>
                 </aside>
 
                 <!-- Products Grid -->
                 <div class="products-grid">
-                    <div class="products-toolbar">
-                        <div class="view-options">
-                            <button class="active"><i class="fas fa-th"></i></button>
-                            <button><i class="fas fa-list"></i></button>
+                    <div class="products-toolbar modern-toolbar">
+                        <div class="products-toolbar-left">
+                            <h2 class="featured-title">All items</h2>
                         </div>
-                        <div class="sort-options">
-                            <select>
-                                <option>Sort: Featured</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
-                                <option>Newest First</option>
-                            </select>
+                        <div class="products-toolbar-right">
+                            <div class="search-box modern-search">
+                                <input type="text" placeholder="Search all 18 items">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="sort-options modern-sort">
+                                <label for="sort-select">Sort:</label>
+                                <select id="sort-select">
+                                    <option>Custom</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Newest First</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
