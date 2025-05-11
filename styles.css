@@ -3032,3 +3032,18 @@ main {
     padding: 0.2em 0.7em;
   }
 }
+/* terms and conditions */
+.terms-page {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 2rem 1rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+/* privacy policy */
+.privacy-page {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 2rem 1rem;
+}
