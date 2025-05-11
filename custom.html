@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Order - OJayHoliday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpeg" alt="OJayHoliday Logo" class="logo-img">
+                        <span>OJayHoliday</span>
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="nav-overlay"></div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="custom.html" class="active">Custom Orders</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="custom-orders">
+        <h1>Custom Order</h1>
+        <p>Want something truly unique? Fill out the form below to create your own custom pet badge reel or accessory. We'll work with you to bring your idea to life!</p>
+        <form class="custom-form">
+            <div class="form-group">
+                <label for="productType">Product Type</label>
+                <select id="productType" name="productType" required>
+                    <option value="">Select a product</option>
+                    <option value="badge-reel">Badge Reel</option>
+                    <option value="keychain">Keychain</option>
+                    <option value="bandana">Bandana</option>
+                    <option value="stocking">Christmas Stocking</option>
+                    <option value="magnet">Photo Magnet</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="petName">Pet Name</label>
+                <input type="text" id="petName" name="petName" placeholder="Your pet's name" required>
+            </div>
+            <div class="form-group">
+                <label for="customText">Custom Text (optional)</label>
+                <input type="text" id="customText" name="customText" placeholder="E.g. 'Best Nurse', 'Merry Christmas', etc.">
+            </div>
+            <div class="form-group">
+                <label for="color">Preferred Colors</label>
+                <input type="text" id="color" name="color" placeholder="E.g. Red, Blue, Gold">
+            </div>
+            <div class="form-group">
+                <label for="photo">Upload Pet Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" placeholder="Describe your idea or any special requests"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Custom Order</button>
+        </form>
+        <div class="preview-section">
+            <h2>Preview</h2>
+            <div class="preview-image" id="previewImage">
+                <!-- Preview will show here after image upload -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OJayHoliday</h3>
+                    <p>Premium pet badge reels crafted with love and attention to detail.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Seller Details</h3>
+                    <div class="seller-info">
+                        <div class="seller-status">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional Seller</span>
+                        </div>
+                        <p class="seller-description">This seller has confirmed that the items they sell on Etsy are in line with all local laws that apply to their business.</p>
+                        <div class="seller-details">
+                            <div class="detail-item">
+                                <i class="fas fa-id-card"></i>
+                                <span>Business registration number: 202312281751497</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Location: IN, United States</span>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-seller">
+                            <i class="fas fa-envelope"></i>
+                            Contact Seller
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="custom.html">Custom Orders</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 OJayHoliday. All rights reserved.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Preview uploaded image
+    document.getElementById('photo')?.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                document.getElementById('previewImage').innerHTML = `<img src="${evt.target.result}" alt="Preview" />`;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
+</body>
+</html> 
