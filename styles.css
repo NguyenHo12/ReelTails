@@ -2841,6 +2841,35 @@ main {
     .about-hero .about-meta { gap: 1rem; }
     .video-grid { grid-template-columns: 1fr; }
 }
+
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fffbe9;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #b77b3a0a;
+}
+.about-table th, .about-table td {
+  padding: 0.8em 1em;
+  text-align: left;
+  border-bottom: 1px solid #f0e8e2;
+  font-size: 1.05rem;
+}
+.about-table th {
+  background: #f7e9d7;
+  color: #b77b3a;
+  font-weight: 700;
+  width: 180px;
+}
+.about-table tr:last-child td, .about-table tr:last-child th {
+  border-bottom: none;
+}
+@media (max-width: 700px) {
+  .about-table th, .about-table td { font-size: 0.97rem; padding: 0.6em 0.5em; }
+  .about-table th { width: 110px; }
+}
 /* Slider styles */
 .slider-container { position: relative; max-width: 600px; margin: 2rem auto; overflow: hidden; border-radius: 1rem; box-shadow: 0 4px 16px #b77b3a11; }
 .slider { display: flex; transition: transform 0.5s ease; }
