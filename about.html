@@ -78,9 +78,20 @@
             </div>
             <div class="about-section about-seller-details">
                 <h3><i class="fas fa-user-check"></i> Seller Details</h3>
-                <div class="detail-item"><i class="fas fa-id-card"></i> <span>Business registration number: 202312281751497</span></div>
-                <div class="detail-item"><i class="fas fa-map-marker-alt"></i> <span>Location: IN, United States</span></div>
-                <div class="detail-item"><i class="fas fa-check-circle"></i> <span>Professional Seller</span></div>
+                <table class="about-table">
+                  <tr>
+                    <th>Business Registration</th>
+                    <td>202312281751497</td>
+                  </tr>
+                  <tr>
+                    <th>Location</th>
+                    <td>IN, United States</td>
+                  </tr>
+                  <tr>
+                    <th>Status</th>
+                    <td>Professional Seller</td>
+                  </tr>
+                </table>
             </div>
             <div class="about-social">
                 <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -192,5 +203,35 @@
         // Auto-advance slides every 5 seconds
         setInterval(nextSlide, 5000);
     </script>
+    <style>
+    .about-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: #fffbe9;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 12px #b77b3a0a;
+    }
+    .about-table th, .about-table td {
+      padding: 0.8em 1em;
+      text-align: left;
+      border-bottom: 1px solid #f0e8e2;
+      font-size: 1.05rem;
+    }
+    .about-table th {
+      background: #f7e9d7;
+      color: #b77b3a;
+      font-weight: 700;
+      width: 180px;
+    }
+    .about-table tr:last-child td, .about-table tr:last-child th {
+      border-bottom: none;
+    }
+    @media (max-width: 700px) {
+      .about-table th, .about-table td { font-size: 0.97rem; padding: 0.6em 0.5em; }
+      .about-table th { width: 110px; }
+    }
+    </style>
 </body>
 </html> 
