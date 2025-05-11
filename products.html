@@ -39,8 +39,8 @@
        
         <div class="container">
             <div class="products-layout">
-                <!-- Sidebar Filters -->
-                <aside class="products-sidebar">
+                <button class="toggle-category-btn" onclick="toggleCategorySidebar()" style="display:none;">Categories</button>
+                <aside class="products-sidebar" id="categorySidebar">
                     <div class="category-filters">
                         <h3>Categories</h3>
                         <ul>
@@ -608,5 +608,30 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    function toggleCategorySidebar() {
+      var sidebar = document.getElementById('categorySidebar');
+      if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+        sidebar.style.display = 'block';
+      } else {
+        sidebar.style.display = 'none';
+      }
+    }
+    // Hiển thị nút và ẩn sidebar mặc định trên mobile
+    function handleCategorySidebarDisplay() {
+      var btn = document.querySelector('.toggle-category-btn');
+      var sidebar = document.getElementById('categorySidebar');
+      if (window.innerWidth <= 600) {
+        btn.style.display = 'block';
+        sidebar.style.display = 'none';
+      } else {
+        btn.style.display = 'none';
+        sidebar.style.display = 'block';
+      }
+    }
+    window.addEventListener('resize', handleCategorySidebarDisplay);
+    document.addEventListener('DOMContentLoaded', handleCategorySidebarDisplay);
+    </script>
 </body>
 </html> 
