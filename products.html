@@ -41,52 +41,69 @@
             <div class="products-layout">
                 <button class="toggle-category-btn" onclick="toggleCategorySidebar()" style="display:none;">Categories</button>
                 <aside class="products-sidebar" id="categorySidebar">
-                    <div class="category-filters">
+                    <nav class="category-filters modern-category">
                         <h3>Categories</h3>
                         <ul id="categoryList">
                             <li>
-                                <button class="category-accordion" type="button">All</button>
+                                <button class="category-accordion active" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🌐</span> All
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">On sale</button>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🔥</span> On sale
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Dog Bandana</button>
-                                <ul class="category-panel" style="display:none;">
-                                    <li>Small Bandana</li>
-                                    <li>Large Bandana</li>
-                                </ul>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🐶</span> Dog Bandana
+                                    <span class="category-badge">2</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Christmas Stockings</button>
-                                <span class="count">4</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🎄</span> Christmas Stockings
+                                    <span class="category-badge">4</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Keychain</button>
-                                <span class="count">3</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🔑</span> Keychain
+                                    <span class="category-badge">3</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Pet Memorial</button>
-                                <span class="count">3</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🌈</span> Pet Memorial
+                                    <span class="category-badge">3</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Badge Buddy</button>
-                                <span class="count">2</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🪪</span> Badge Buddy
+                                    <span class="category-badge">2</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Photo Ornament</button>
-                                <span class="count">1</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🎁</span> Photo Ornament
+                                    <span class="category-badge">1</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Photo Fridge Magnet</button>
-                                <span class="count">2</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">🧲</span> Photo Fridge Magnet
+                                    <span class="category-badge">2</span>
+                                </button>
                             </li>
                             <li>
-                                <button class="category-accordion" type="button">Custom Pins</button>
-                                <span class="count">1</span>
+                                <button class="category-accordion" type="button" style="font-size:1.18rem;">
+                                    <span class="cat-icon">📌</span> Custom Pins
+                                    <span class="category-badge">1</span>
+                                </button>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                 </aside>
 
                 <!-- Products Grid -->
