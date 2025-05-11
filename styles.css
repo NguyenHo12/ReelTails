@@ -3611,8 +3611,8 @@ main {
 }
 
 .category-filters.modern-category .category-accordion {
-  color: #2a1a05 !important; /* much darker text */
-  background: #fffbe9 !important; /* very light background */
+  color: #2A1A05 !important; /* Darker text for better contrast */
+  background: #FFFBE9 !important; /* Light background */
   font-weight: 600;
   border: none;
   border-radius: 10px;
@@ -3623,19 +3623,29 @@ main {
   gap: 0.7em;
   transition: background 0.2s, color 0.2s;
 }
+
 .category-filters.modern-category .category-accordion.active,
 .category-filters.modern-category .category-accordion:focus,
 .category-filters.modern-category .category-accordion:hover {
-  background: #f0e8e2 !important;
-  color: #ac8465 !important;
+  background: #8B4513 !important; /* Darker brown for better contrast */
+  color: #FFFFFF !important; /* White text for maximum contrast */
 }
+
 .category-filters.modern-category .cat-icon {
+  color: #8B4513 !important; /* Darker brown for better contrast */
   font-size: 1.3em;
   margin-right: 0.5em;
 }
+
+.category-filters.modern-category .category-accordion.active .cat-icon,
+.category-filters.modern-category .category-accordion:focus .cat-icon,
+.category-filters.modern-category .category-accordion:hover .cat-icon {
+  color: #FFFFFF !important; /* White icon for maximum contrast */
+}
+
 .category-filters.modern-category .category-badge {
-  background: #ac8465;
-  color: #fff;
+  background: #8B4513; /* Darker brown for better contrast */
+  color: #FFFFFF;
   font-size: 0.95em;
   font-weight: 700;
   border-radius: 999px;
