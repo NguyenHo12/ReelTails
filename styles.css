@@ -3648,3 +3648,22 @@ main {
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+.contact-seller {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #fff !important;
+  background: #4a3c2f !important;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  opacity: 1 !important;
+}
+.contact-seller:hover, .contact-seller:focus {
+  background: #ac8465 !important;
+  color: #fffbe9 !important;
+  text-decoration: underline;
+}
