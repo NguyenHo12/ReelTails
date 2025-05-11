@@ -673,7 +673,7 @@ img {
 }
 
 .newsletter-form button {
-  background: var(--accent-color);
+  background: #130d05;
   color: var(--white);
   border: none;
   padding: var(--spacing-md);
@@ -3601,4 +3601,39 @@ main {
   .testimonial-card:last-child {
     margin-right: 0;
   }
+}
+
+.category-filters.modern-category .category-accordion {
+  color: #2a1a05 !important; /* much darker text */
+  background: #fffbe9 !important; /* very light background */
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 0.4rem;
+  padding: 0.85em 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  transition: background 0.2s, color 0.2s;
+}
+.category-filters.modern-category .category-accordion.active,
+.category-filters.modern-category .category-accordion:focus,
+.category-filters.modern-category .category-accordion:hover {
+  background: #f0e8e2 !important;
+  color: #ac8465 !important;
+}
+.category-filters.modern-category .cat-icon {
+  font-size: 1.3em;
+  margin-right: 0.5em;
+}
+.category-filters.modern-category .category-badge {
+  background: #ac8465;
+  color: #fff;
+  font-size: 0.95em;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.2em 0.8em;
+  margin-left: auto;
+  margin-right: 0.2em;
+  display: inline-block;
 }
