@@ -43,45 +43,46 @@
                 <aside class="products-sidebar" id="categorySidebar">
                     <div class="category-filters">
                         <h3>Categories</h3>
-                        <ul>
+                        <ul id="categoryList">
                             <li>
-                                <span>All</span>
-                                <span class="count">18</span>
+                                <button class="category-accordion" type="button">All</button>
                             </li>
                             <li>
-                                <span>On sale</span>
-                                <span class="count">1</span>
+                                <button class="category-accordion" type="button">On sale</button>
                             </li>
                             <li>
-                                <span>Dog Bandana</span>
-                                <span class="count">1</span>
+                                <button class="category-accordion" type="button">Dog Bandana</button>
+                                <ul class="category-panel" style="display:none;">
+                                    <li>Small Bandana</li>
+                                    <li>Large Bandana</li>
+                                </ul>
                             </li>
                             <li>
-                                <span>Christmas Stockings</span>
+                                <button class="category-accordion" type="button">Christmas Stockings</button>
                                 <span class="count">4</span>
                             </li>
                             <li>
-                                <span>Keychain</span>
+                                <button class="category-accordion" type="button">Keychain</button>
                                 <span class="count">3</span>
                             </li>
                             <li>
-                                <span>Pet Memorial</span>
+                                <button class="category-accordion" type="button">Pet Memorial</button>
                                 <span class="count">3</span>
                             </li>
                             <li>
-                                <span>Badge Buddy</span>
+                                <button class="category-accordion" type="button">Badge Buddy</button>
                                 <span class="count">2</span>
                             </li>
                             <li>
-                                <span>Photo Ornament</span>
+                                <button class="category-accordion" type="button">Photo Ornament</button>
                                 <span class="count">1</span>
                             </li>
                             <li>
-                                <span>Photo Fridge Magnet</span>
+                                <button class="category-accordion" type="button">Photo Fridge Magnet</button>
                                 <span class="count">2</span>
                             </li>
                             <li>
-                                <span>Custom Pins</span>
+                                <button class="category-accordion" type="button">Custom Pins</button>
                                 <span class="count">1</span>
                             </li>
                         </ul>
@@ -612,11 +613,7 @@
     <script>
     function toggleCategorySidebar() {
       var sidebar = document.getElementById('categorySidebar');
-      if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-        sidebar.style.display = 'block';
-      } else {
-        sidebar.style.display = 'none';
-      }
+      sidebar.classList.toggle('show');
     }
     // Hiển thị nút và ẩn sidebar mặc định trên mobile
     function handleCategorySidebarDisplay() {
@@ -624,14 +621,31 @@
       var sidebar = document.getElementById('categorySidebar');
       if (window.innerWidth <= 600) {
         btn.style.display = 'block';
-        sidebar.style.display = 'none';
+        sidebar.classList.remove('show');
+        sidebar.style.display = '';
       } else {
         btn.style.display = 'none';
+        sidebar.classList.remove('show');
         sidebar.style.display = 'block';
       }
     }
     window.addEventListener('resize', handleCategorySidebarDisplay);
     document.addEventListener('DOMContentLoaded', handleCategorySidebarDisplay);
+
+    // Accordion cho category
+    var acc = document.getElementsByClassName('category-accordion');
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener('click', function() {
+        var panel = this.nextElementSibling;
+        if (panel && panel.classList.contains('category-panel')) {
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
+        }
+      });
+    }
     </script>
 </body>
 </html> 

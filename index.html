@@ -130,18 +130,8 @@
             <div class="container">
                 <div class="testimonials-header">
                     <h2>Customer Reviews</h2>
-                    <div class="rating-summary">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span>5.0 out of 5 stars (650 reviews)</span>
-                    </div>
                 </div>
-                <div class="testimonial-slider">
+                <div class="testimonial-slider" id="testimonialSlider">
                     <div class="testimonial-card">
                         <div class="testimonial-avatar">
                             <img src="images/avatars/katelyn.jpg" alt="Katelyn" loading="lazy">
@@ -381,5 +371,45 @@
             </div>
         </div>
     </footer>
+    <script>
+    // Testimonial slider script
+    const slider = document.getElementById('testimonialSlider');
+    const cards = slider.querySelectorAll('.testimonial-card');
+    let currentTestimonial = 0;
+    let autoSlideInterval;
+    function showTestimonial(n) {
+      let isDesktop = window.innerWidth >= 900;
+      const nav = document.querySelector('.testimonial-nav');
+      if (isDesktop) {
+        // Show all cards, hide nav
+        cards.forEach(card => {
+          card.classList.add('active');
+          card.style.display = 'block';
+        });
+        if (nav) nav.style.display = 'none';
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+      } else {
+        // Show all cards, hide nav
+        cards.forEach(card => {
+          card.classList.add('active');
+          card.style.display = 'block';
+        });
+        if (nav) nav.style.display = 'none';
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+      }
+    }
+    function moveTestimonial(dir) {
+      // Không làm gì trên mobile
+      let isDesktop = window.innerWidth >= 900;
+      if (!isDesktop) return;
+      currentTestimonial += dir;
+      if (currentTestimonial < 0) currentTestimonial = cards.length - 1;
+      if (currentTestimonial >= cards.length) currentTestimonial = 0;
+      showTestimonial(currentTestimonial);
+    }
+    // Init
+    showTestimonial(currentTestimonial);
+    window.addEventListener('resize', () => showTestimonial(currentTestimonial));
+    </script>
 </body>
 </html> 
