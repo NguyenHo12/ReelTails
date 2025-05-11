@@ -6,30 +6,6 @@
     <title>About OJayHoliday</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .about-hero { background: linear-gradient(90deg, #f7e9d7 60%, #fff 100%); padding: 3rem 0 2rem 0; text-align: center; }
-        .about-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary-color, #b77b3a); }
-        .about-hero .about-meta { display: flex; justify-content: center; gap: 2.5rem; margin-top: 1.2rem; flex-wrap: wrap; }
-        .about-hero .meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; color: #6b4c1b; background: #fffbe9; border-radius: 1.5rem; padding: 0.5rem 1.2rem; box-shadow: 0 2px 8px #b77b3a11; }
-        .about-main { max-width: 900px; margin: 2.5rem auto; background: #fff; border-radius: 2rem; box-shadow: 0 4px 32px #b77b3a11; padding: 2.5rem 2rem; }
-        .about-main h2 { color: var(--primary-color, #b77b3a); margin-bottom: 1rem; }
-        .about-story { font-size: 1.13rem; color: #3d2a0a; line-height: 1.7; margin-bottom: 2.5rem; }
-        .about-section { margin-bottom: 2.5rem; }
-        .about-section h3 { color: #b77b3a; margin-bottom: 0.7rem; }
-        .about-policies ul, .about-policies li { margin: 0; padding: 0; list-style: none; }
-        .about-policies li { margin-bottom: 0.7em; display: flex; align-items: flex-start; gap: 0.7em; }
-        .about-policies i { color: #b77b3a; margin-top: 0.1em; }
-        .about-seller-details { background: #fffbe9; border-radius: 1.2rem; padding: 1.2rem 1rem; box-shadow: 0 2px 12px #b77b3a0a; }
-        .about-seller-details .detail-item { display: flex; align-items: center; gap: 0.7em; margin-bottom: 0.6em; color: #6b4c1b; }
-        .about-social { margin-top: 1.5rem; }
-        .about-social a { display: inline-block; margin: 0 0.5em; font-size: 1.5rem; color: #b77b3a; transition: color 0.2s; }
-        .about-social a:hover { color: #e6a04e; }
-        @media (max-width: 700px) {
-            .about-main { padding: 1.2rem 0.5rem; }
-            .about-hero h1 { font-size: 2rem; }
-            .about-hero .about-meta { gap: 1rem; }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -70,6 +46,15 @@
         <section class="about-main">
             <div class="about-section">
                 <h2>Our Story</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="images/team/team1.png" alt="Team Member 1">
+                        <img src="images/team/team2.png" alt="Team Member 2">
+                        <img src="images/team/team3.png" alt="Team Member 3">
+                    </div>
+                    <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+                    <button class="slider-btn next" onclick="nextSlide()">❯</button>
+                </div>
                 <div class="about-story">
                     Have you ever wondered about the tale behind your favorite shop? Every shop has a story, and ours is a testament to the power of passion, perseverance, and the constant quest for 'something special'. Welcome to OJAY HOLIDAY, a place where dreams come to life.<br><br>
                     The idea for OJAY HOLIDAY sprouted from a simple notion: starting a small business is always challenging, but we need to keep going. My partner and I, both with a deep-seated love for unique, handmade items, decided to take on this challenge. We wanted to create a space that offers more than just products; we wanted to provide an experience, a holiday for the soul, and thus, OJAY HOLIDAY was born.<br><br>
@@ -101,6 +86,23 @@
                 <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+            <div class="about-videos">
+                <h3><i class="fas fa-video"></i> Our Videos</h3>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <video controls>
+                            <source src="videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="videos/video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -155,5 +157,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            currentSlide = (n + totalSlides) % totalSlides;
+            const offset = currentSlide * -100;
+            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 </html> 
