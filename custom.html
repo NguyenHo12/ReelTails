@@ -37,45 +37,52 @@
     <main class="custom-orders">
         <h1>Custom Order</h1>
         <p>Want something truly unique? Fill out the form below to create your own custom pet badge reel or accessory. We'll work with you to bring your idea to life!</p>
-        <form class="custom-form">
-            <div class="form-group">
-                <label for="productType">Product Type</label>
-                <select id="productType" name="productType" required>
-                    <option value="">Select a product</option>
-                    <option value="badge-reel">Badge Reel</option>
-                    <option value="keychain">Keychain</option>
-                    <option value="bandana">Bandana</option>
-                    <option value="stocking">Christmas Stocking</option>
-                    <option value="magnet">Photo Magnet</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="petName">Pet Name</label>
-                <input type="text" id="petName" name="petName" placeholder="Your pet's name" required>
-            </div>
-            <div class="form-group">
-                <label for="customText">Custom Text (optional)</label>
-                <input type="text" id="customText" name="customText" placeholder="E.g. 'Best Nurse', 'Merry Christmas', etc.">
-            </div>
-            <div class="form-group">
-                <label for="color">Preferred Colors</label>
-                <input type="text" id="color" name="color" placeholder="E.g. Red, Blue, Gold">
-            </div>
-            <div class="form-group">
-                <label for="photo">Upload Pet Photo</label>
-                <input type="file" id="photo" name="photo" accept="image/*" required>
-            </div>
-            <div class="form-group">
-                <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes" placeholder="Describe your idea or any special requests"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Submit Custom Order</button>
-        </form>
-        <div class="preview-section">
-            <h2>Preview</h2>
-            <div class="preview-image" id="previewImage">
-                <!-- Preview will show here after image upload -->
+        <div class="custom-layout">
+            <form class="custom-form">
+                <div class="form-group">
+                    <label for="productType">Product Type</label>
+                    <select id="productType" name="productType" required>
+                        <option value="">Select a product</option>
+                        <option value="badge-reel">Badge Reel</option>
+                        <option value="keychain">Keychain</option>
+                        <option value="bandana">Bandana</option>
+                        <option value="stocking">Christmas Stocking</option>
+                        <option value="magnet">Photo Magnet</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petName">Pet Name</label>
+                    <input type="text" id="petName" name="petName" placeholder="Your pet's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customText">Custom Text (optional)</label>
+                    <input type="text" id="customText" name="customText" placeholder="E.g. 'Best Nurse', 'Merry Christmas', etc.">
+                </div>
+                <div class="form-group">
+                    <label for="color">Preferred Colors</label>
+                    <input type="text" id="color" name="color" placeholder="E.g. Red, Blue, Gold">
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Pet Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Describe your idea or any special requests"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Custom Order</button>
+            </form>
+            <div class="preview-section">
+                <h2>Preview</h2>
+                <div class="preview-image" id="previewImage">
+                    <div class="mockup-preview" id="mockupPreview">
+                        <img src="images/mockup/mockup.jpeg" alt="Badge Reel Mockup" style="width:160px; display:block; margin:0 auto 1rem auto; border-radius:1rem; box-shadow:0 2px 8px #0001;">
+                        <div style="text-align:center; margin-bottom:0.5rem; font-weight:600; color:#b77b3a; font-size:1.1rem;">Pet Name: <span id="mockupPetName">Your Pet</span></div>
+                        <div style="text-align:center; color:#6b4c1b; font-size:0.98rem;">Color: <span id="mockupColor">Red, Gold</span></div>
+                        <div style="text-align:center; color:#3d2a0a; font-size:0.95rem; margin-top:0.5rem;">Text: <span id="mockupText">Best Nurse</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -139,16 +146,39 @@
     </footer>
     <script>
     // Preview uploaded image
-    document.getElementById('photo')?.addEventListener('change', function(e) {
+    const photoInput = document.getElementById('photo');
+    const previewImage = document.getElementById('previewImage');
+    const mockupPreview = document.getElementById('mockupPreview');
+    const petNameInput = document.getElementById('petName');
+    const colorInput = document.getElementById('color');
+    const customTextInput = document.getElementById('customText');
+
+    function updateMockup() {
+        document.getElementById('mockupPetName').textContent = petNameInput.value || 'Your Pet';
+        document.getElementById('mockupColor').textContent = colorInput.value || 'Red, Gold';
+        document.getElementById('mockupText').textContent = customTextInput.value || 'Best Nurse';
+    }
+
+    petNameInput.addEventListener('input', updateMockup);
+    colorInput.addEventListener('input', updateMockup);
+    customTextInput.addEventListener('input', updateMockup);
+
+    photoInput?.addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function(evt) {
-                document.getElementById('previewImage').innerHTML = `<img src="${evt.target.result}" alt="Preview" />`;
+                previewImage.innerHTML = `<img src="${evt.target.result}" alt="Preview" style="width:160px; display:block; margin:0 auto; border-radius:1rem; box-shadow:0 2px 8px #0001;" />`;
             };
             reader.readAsDataURL(file);
+        } else {
+            previewImage.innerHTML = mockupPreview.outerHTML;
+            updateMockup();
         }
     });
+
+    // Hiển thị mockup ban đầu
+    updateMockup();
     </script>
 </body>
 </html> 

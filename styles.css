@@ -803,7 +803,7 @@ footer::before {
 .contact-info li span {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 .footer-bottom {
@@ -2882,3 +2882,38 @@ main {
 }
 
 .contact-info li { color: #3d2a0a; font-weight: 500; font-size: 1.05rem; }
+
+.custom-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 2.5rem auto;
+}
+.custom-form {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--spacing-xl);
+}
+.preview-section {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .custom-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+    margin: 1.2rem 0.5rem;
+  }
+  .custom-form, .preview-section {
+    padding: var(--spacing-md);
+  }
+}
