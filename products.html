@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ReelTails</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpeg" alt="ReelTails Logo" class="logo-img">
+                        <span>ReelTails</span>
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="nav-overlay"></div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html" class="active">Products</a>
+                    <a href="custom.html">Custom Orders</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <div class="container">
+            <div class="products-header">
+                <h1>Our Products</h1>
+                <div class="products-stats">
+                    <span>3971 Sales</span>
+                    <span>184 Admirers</span>
+                </div>
+            </div>
+
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside class="products-sidebar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="category-filters">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="all">
+                                    All (18)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="on-sale">
+                                    On Sale (1)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="dog-bandana">
+                                    Dog Bandana (1)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="christmas-stockings">
+                                    Christmas Stockings (4)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="keychain">
+                                    Keychain (3)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="pet-memorial">
+                                    Pet Memorial (3)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="badge-buddy">
+                                    Badge Buddy (2)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="photo-ornament">
+                                    Photo Ornament (1)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="photo-fridge-magnet">
+                                    Photo Fridge Magnet (2)
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="custom-pins">
+                                    Custom Pins (1)
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="price-filter">
+                        <h3>Price Range</h3>
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" min="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" min="0">
+                        </div>
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <div class="products-toolbar">
+                        <div class="view-options">
+                            <button class="active"><i class="fas fa-th"></i></button>
+                            <button><i class="fas fa-list"></i></button>
+                        </div>
+                        <div class="sort-options">
+                            <select>
+                                <option>Sort: Featured</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-container">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/badge-reel.png" alt="Custom Badge Reel">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <div class="product-badge sale">50% OFF</div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Badge Reel</h3>
+                                <p>Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel</p>
+                                <div class="product-price">
+                                    <span class="sale-price">158,886₫</span>
+                                    <span class="original-price">317,772₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/keychain.png" alt="Custom Pet Photo Keychain">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Pet Photo Keychain</h3>
+                                <p>Cute Acrylic Keychain, 21st Birthday Gift, Back to School, Purse Charm</p>
+                                <div class="product-price">
+                                    <span class="sale-price">636,074₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/stocking.png" alt="Personalized Christmas Dog Stocking">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Personalized Christmas Dog Stocking</h3>
+                                <p>Pet Stocking, Dog Bone Stocking, Dog Paw, Dog Lover Gift</p>
+                                <div class="product-price">
+                                    <span class="sale-price">317,772₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/pin.png" alt="Custom Dog Pin">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Dog Pin</h3>
+                                <p>Cat Pin, Pet Photo Pins, Nursing Pin, Enamel Pins, Lapel Pin</p>
+                                <div class="product-price">
+                                    <span class="sale-price">423,873₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/bandana.png" alt="Custom Christmas Dog Bandana">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Christmas Dog Bandana</h3>
+                                <p>Cat Bandana, Pet Bandana Fit Dog Collars, Dog Leash, Dog Clothes</p>
+                                <div class="product-price">
+                                    <span class="sale-price">370,822₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/ornament.png" alt="Custom Dog Memorial Ornament">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Dog Memorial Ornament</h3>
+                                <p>Dog Remembrance Gift, Christmas Cat Ornament, Pet Loss Ornament</p>
+                                <div class="product-price">
+                                    <span class="sale-price">742,175₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/magnet.png" alt="Custom Birthday Gift for Her">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Birthday Gift for Her</h3>
+                                <p>Photo Magnets, Photo Fridge Magnet, Unique Holiday Gift</p>
+                                <div class="product-price">
+                                    <span class="sale-price">795,491₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/products/memorial.png" alt="Custom Dog Memorial Gifts">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Dog Memorial Gifts</h3>
+                                <p>Pet Memorial Gifts, Cat Memorial Gifts, In Loving Memory</p>
+                                <div class="product-price">
+                                    <span class="sale-price">662,865₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                    <img src="images/products/badge-reel-2.png" alt="Custom Christmas Badge Reel">
+                                <div class="product-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Custom Christmas Badge Reel</h3>
+                                <p>Phlebotomy Badge Reel, Badge Reel Funny, Retractable Nurse Badge Reel</p>
+                                <div class="product-price">
+                                    <span class="sale-price">530,239₫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Reviews Section -->
+            <section class="product-reviews">
+                <div class="reviews-header">
+                    <h2>Customer Reviews</h2>
+                    <div class="reviews-summary">
+                        <div class="rating-overview">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>Average item review 5 out of 5 stars (650)</span>
+                        </div>
+                        <div class="sort-options">
+                            <select>
+                                <option>Sort by: Suggested</option>
+                                <option>Most Recent</option>
+                                <option>Highest Rated</option>
+                                <option>Lowest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-container">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/katelyn.jpg" alt="Katelyn" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Katelyn</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 10, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>So cute! I love it</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/sandra.jpg" alt="Sandra" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Sandra</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 9, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>The shop was very friendly, worked with me to find a good picture, and the product was shipped quickly. Great quality.</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/laura.jpg" alt="Laura" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Laura Morreale</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 10, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>Love the actual keychain but I would not recommend buying the glass ball especially if you're using the keychain on your everyday key ring. It broke in my pocket unbeknownst to me and I shoved my hand in my pocket and got stabbed with glass and there was all stars and glass in my pocket but I love the actual keychain</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Pet Photo Keychain, Cute Acrylic Keychain, 21st Birthday Gift, Back to School, Purse Charm, Key Chain, Nurse Gifts, Christmas Gift</p>
+                        </div>
+                        <div class="review-photo">
+                            <img src="images/reviews/review1.png" alt="Review Photo">
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/kindra.jpg" alt="Kindra" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Kindra Silva</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 9, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>I love how I can wear my dogs with me to work. This was a perfect gift for my husband getting one with his princess. I have 3 dogs and was unsure how big it would look but it came out the perfect size.</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                        <div class="review-photo">
+                            <img src="images/reviews/review2.png" alt="Review Photo">
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/Alyssa.jpg" alt="Alyssa" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Alyssa</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 9, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>Great quality product! My husband was so happy with how this turned out that he wants one for himself!</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/angelica.jpg" alt="Angelica" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Angelica Mangual</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 8, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>Quality of the item is good & it met my expectations, I love it 🥰</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                        <div class="review-photo">
+                            <img src="images/reviews/review3.png" alt="Review Photo">
+                        </div>
+                    </div>
+
+                    <!-- Review 7 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/sarah.jpg" alt="Sarah" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Sarah</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 7, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>Love this!! I will be buying another one immediately!</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 8 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="images/avatars/malori.jpg" alt="Malori" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Malori</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">May 7, 2025</span>
+                        </div>
+                        <div class="review-content">
+                            <p>Product met my expectations, it's adorable</p>
+                        </div>
+                        <div class="review-product">
+                            <p>Custom Badge Reel Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel, Retractable Badge Holder, ID Badge Buddy</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ReelTails</h3>
+                    <p>Premium pet badge reels crafted with love and attention to detail.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="custom.html">Custom Orders</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Pet Street, San Francisco, CA 94107</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@reeltails.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 ReelTails. All rights reserved.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
