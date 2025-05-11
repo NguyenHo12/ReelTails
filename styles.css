@@ -2917,3 +2917,118 @@ main {
     padding: var(--spacing-md);
   }
 }
+@media (max-width: 600px) {
+  .custom-layout {
+    margin: 0.5rem 0.2rem;
+    gap: 1rem;
+  }
+  .custom-form, .preview-section {
+    padding: 0.7rem 0.3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ac846511;
+  }
+  .custom-form label, .preview-section h2 {
+    font-size: 1rem;
+  }
+  .custom-form input, .custom-form select, .custom-form textarea {
+    font-size: 0.98rem;
+    padding: 0.7rem;
+    border-radius: 8px;
+  }
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+  }
+  .preview-image img, .mockup-preview img {
+    width: 110px !important;
+    max-width: 100%;
+    margin-bottom: 0.7rem !important;
+  }
+  .mockup-preview div {
+    font-size: 0.95rem !important;
+  }
+  .category-filters h3 {
+    font-size: 1.08rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 0.5rem 0.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    background: #fffbe9;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #b77b3a11;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-page {
+    padding: 0.5rem 0.1rem;
+    margin-top: 2.5rem;
+  }
+  .products-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+    max-width: 100%;
+  }
+  .products-sidebar {
+    padding: 0.5rem 0;
+    border: none;
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 0.5rem;
+  }
+  .products-toolbar.modern-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .products-toolbar-left h2 {
+    font-size: 1.1rem;
+  }
+  .products-toolbar-right {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .search-box.modern-search {
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.1rem 0.5rem;
+  }
+  .products-container {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem;
+    padding: 10;
+    width: 100%;
+  }
+  .product-card {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+  .product-info {
+    padding: 0.7rem;
+  }
+  .product-info h3 {
+    font-size: 1rem;
+  }
+  .product-info p {
+    font-size: 0.92rem;
+  }
+  .product-price {
+    font-size: 1.1rem;
+  }
+  .btn-favorite, .btn-cart {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .product-badge {
+    font-size: 0.85rem;
+    padding: 0.2em 0.7em;
+  }
+}
