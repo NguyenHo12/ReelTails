@@ -20,7 +20,7 @@
                     </a>
                 </div>
                 <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <label for="nav-toggle" class="nav-toggle-label">
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Open navigation">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -287,7 +287,8 @@
                 <h2>Stay Updated</h2>
                 <p>Subscribe to our newsletter for exclusive offers and new product announcements</p>
                 <form id="newsletter-form" class="newsletter-form" name="newsletter-form" action="https://www.etsy.com/shop/OJayHoliday" method="POST"  >
-                    <input type="email" placeholder="Enter your email" required name="email" >
+                    <label for="newsletter-email" class="sr-only">Email address</label>
+                    <input id="newsletter-email" type="email" placeholder="Enter your email" required name="email" >
                     <button type="submit" name="subscribe" value="Subscribe">Subscribe</button>
                 </form>
                 <div class="newsletter-benefits">
