@@ -3769,4 +3769,35 @@ main {
   }
 }
 
+.mockup-preview {
+    text-align: center;
+    padding: 1rem;
+}
+
+.mockup-preview img {
+    width: 160px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mockup-preview .pet-name {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #8B4513;
+    font-size: 1.1rem;
+}
+
+.mockup-preview .color-info {
+    color: #2A1A05;
+    font-size: 0.98rem;
+}
+
+.mockup-preview .text-info {
+    color: #2A1A05;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
 
