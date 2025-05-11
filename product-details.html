@@ -6,6 +6,30 @@
     <title>Custom Badge Reel - Product Details</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Fade-in animation */
+        .product-details-layout { animation: fadeIn 0.8s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+        /* Gallery thumbnail */
+        .product-thumbnails { display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center; }
+        .product-thumb { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; box-shadow: 0 2px 8px #0001; cursor: pointer; border: 2px solid transparent; transition: border 0.2s; }
+        .product-thumb.active, .product-thumb:hover { border: 2px solid var(--primary-color); }
+        /* Badge animation */
+        .product-badge.sale { animation: badgePop 1.2s infinite alternate; }
+        @keyframes badgePop { 0% { transform: scale(1);} 100% { transform: scale(1.08) rotate(-3deg);} }
+        /* Info block style */
+        .product-info-block { background: var(--white); border-radius: 1.5rem; box-shadow: 0 4px 24px #ac84651a; padding: 2.5rem 2rem; }
+        /* Description bullet */
+        .product-description ul { margin: 0 0 0 1.2em; padding: 0; }
+        .product-description li { margin-bottom: 0.7em; font-size: 1.08rem; color: var(--text-color); position: relative; padding-left: 1.5em; }
+        .product-description li:before { content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--primary-color); position: absolute; left: 0; top: 0.1em; font-size: 1em; }
+        /* Add to cart btn gradient */
+        .add-to-cart-btn { background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); box-shadow: 0 4px 16px #ac846522; }
+        .add-to-cart-btn:active { transform: scale(0.97); }
+        /* Responsive */
+        @media (max-width: 900px) { .product-info-block { padding: 1.5rem 1rem; } }
+        @media (max-width: 576px) { .product-info-block { padding: 1rem 0.5rem; } }
+    </style>
 </head>
 <body>
     <header>
@@ -40,28 +64,73 @@
             <div class="product-details-layout">
                 <!-- Product Images -->
                 <div class="product-images">
-                    <img src="images/products/badge-reel.png" alt="Custom Badge Reel" class="main-product-image">
-                    <!-- Có thể thêm gallery nhỏ ở đây nếu muốn -->
+                    <img src="images/products/badge-reel.png" alt="Custom Badge Reel" class="main-product-image" id="mainProductImg">
+                    <div class="product-thumbnails">
+                        <img src="images/products/badge-reel.png" class="product-thumb active" data-img="images/products/badge-reel.png" alt="Thumb 1">
+                        <img src="images/products/badge-reel-2.png" class="product-thumb" data-img="images/products/badge-reel-2.png" alt="Thumb 2">
+                        <img src="images/products/keychain.png" class="product-thumb" data-img="images/products/keychain.png" alt="Thumb 3">
+                    </div>
                 </div>
                 <!-- Product Info -->
                 <div class="product-info-block">
                     <h1 class="product-title">Custom Badge Reel</h1>
                     <div class="product-price-detail">
-                        <span class="sale-price">158,886₫</span>
-                        <span class="original-price">317,772₫</span>
+                        <span class="sale-price">$6.50</span>
+                        <span class="original-price">$13.00</span>
                         <span class="product-badge sale">50% OFF</span>
                     </div>
                     <div class="product-description">
-                        <p>
-                            Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel.<br>
-                            Reel with 2 Faces. Perfect for nurses, teachers, office workers, and pet lovers!<br>
-                            High quality, durable, and customizable with your favorite pet photo.
-                        </p>
+                        <ul>
+                            <li>Funny, Dog Badge Reel, Cat Badge Reel, Nurse Badge Reel, Christmas Badge Reel</li>
+                            <li>Reel with 2 Faces. Perfect for nurses, teachers, office workers, and pet lovers!</li>
+                            <li>High quality, durable, and customizable with your favorite pet photo</li>
+                        </ul>
                     </div>
                     <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                 </div>
             </div>
         </div>
+        <!-- Related Products Section -->
+        <section class="related-products-section">
+            <h2 class="related-title">Related Products</h2>
+            <div class="related-products-grid">
+                <a href="product-details.html" class="related-card">
+                    <div class="related-img-wrap">
+                        <img src="images/products/keychain.png" alt="Custom Pet Photo Keychain">
+                        <span class="product-badge sale">NEW</span>
+                    </div>
+                    <div class="related-info">
+                        <h3>Custom Pet Photo Keychain</h3>
+                        <div class="product-price">
+                            <span class="sale-price">$26.00</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-details.html" class="related-card">
+                    <div class="related-img-wrap">
+                        <img src="images/products/stocking.png" alt="Christmas Dog Stocking">
+                    </div>
+                    <div class="related-info">
+                        <h3>Christmas Dog Stocking</h3>
+                        <div class="product-price">
+                            <span class="sale-price">$13.00</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-details.html" class="related-card">
+                    <div class="related-img-wrap">
+                        <img src="images/products/bandana.png" alt="Dog Bandana">
+                        <span class="product-badge sale">HOT</span>
+                    </div>
+                    <div class="related-info">
+                        <h3>Dog Bandana</h3>
+                        <div class="product-price">
+                            <span class="sale-price">$15.10</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -115,5 +184,15 @@
             </div>
         </div>
     </footer>
+    <script>
+    // Gallery thumbnail click
+    document.querySelectorAll('.product-thumb').forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            document.getElementById('mainProductImg').src = this.dataset.img;
+            document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html> 
